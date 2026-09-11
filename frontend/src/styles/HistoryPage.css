@@ -1,0 +1,64 @@
+.history-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+.history-header {
+  margin-bottom: 2rem;
+}
+.history-header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+.history-header p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.history-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.history-card-info {
+  flex: 1;
+  min-width: 0;
+}
+.history-card-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.history-idea {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+.history-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.history-date {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+}
+.history-card-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+.delete-btn {
+  color: var(--accent-red) !important;
+}
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border-color: var(--accent-red) !important;
+}
