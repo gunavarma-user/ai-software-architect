@@ -264,9 +264,9 @@ def generate_demo_blueprint(idea: str) -> dict:
 
 def _build_mermaid_arch(modules: list, name: str, complexity: str) -> str:
     lines = ["graph TD"]
-    lines.append(f'    User["\\U0001F464 User / Client"]')
-    lines.append(f'    Frontend["\\U0001F310 React Frontend"]')
-    lines.append(f'    API["\\u26A1 API Gateway"]')
+    lines.append(f'    User["User / Client"]')
+    lines.append(f'    Frontend["React Frontend"]')
+    lines.append(f'    API["API Gateway"]')
     lines.append('    User --> Frontend')
     lines.append('    Frontend --> API')
 
@@ -275,13 +275,13 @@ def _build_mermaid_arch(modules: list, name: str, complexity: str) -> str:
         lines.append(f'    {safe}["{mod["name"]}"]')
         lines.append(f'    API --> {safe}')
 
-    lines.append('    DB[("\\U0001F5C4 Database")]')
+    lines.append('    DB[("Database")]')
     for mod in modules[:6]:
         safe = re.sub(r'[^a-zA-Z0-9]', '', mod["name"])
         lines.append(f'    {safe} --> DB')
 
     if complexity in ("Medium", "High"):
-        lines.append('    Cache[("\\U0001F4E6 Cache")]')
+        lines.append('    Cache[("Cache")]')
         lines.append('    API --> Cache')
 
     return "\n".join(lines)
