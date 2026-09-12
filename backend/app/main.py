@@ -11,7 +11,7 @@ app = FastAPI(title="AI Software Architect", version="1.0.0")
 import os
 
 # Parse allowed origins from environment or default to local dev
-allowed_origins_str = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000,http://localhost:5173")
+allowed_origins_str = os.getenv("ALLOWED_ORIGINS", "https://ai-software-architect-henna.vercel.app,http://localhost:3000,http://localhost:5173")
 origins = [origin.strip() for origin in allowed_origins_str.split(",") if origin.strip()]
 
 # If they provide a specific FRONTEND_URL for Vercel, make sure it's in the list
